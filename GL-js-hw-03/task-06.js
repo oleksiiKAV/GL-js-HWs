@@ -6,8 +6,8 @@ const products = [
 ];
 
 const calculateTotalPrice = function(allProdcuts, productName) {
-  // вот никак не получается )))
-  return allProdcuts + productName;
+  const product = allProdcuts.find(item => item.name === productName);
+  return product.price * product.quantity;
 };
 
 /*
